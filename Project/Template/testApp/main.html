@@ -1,0 +1,28 @@
+{% extends 'testApp/index.html' %}
+
+{% block title %}
+Home Page 
+{% endblock %}
+ 
+{% block main %}
+<div class="container-md border-bottom" style="border-color: rgb(0, 255, 200) !important; border-width: 10px !important;">
+    <div class="p-5 pb-2 my-4 bg-body-tertiary rounded-3 ">
+        <h1 class="display-5 fw-bold text-center heading-font">BCIIT NEWS PORTAL</h1>
+        <p class=" fs-4 heading-font text-center">Here You will get all treading News. Catch up with all thats happening within BCIIT.</p>
+        <div class="container-fluid py-5">
+            <div class="row text-center">
+                <div class="col-sm-4 mb-3">
+                    <a class="btn button-color btn-lg w-75 " type="button" href="/StudentNews">Student News</a>
+                </div>
+                <div class="col-sm-4 mb-3">
+                    <a class="btn button-color btn-lg w-75" type="button" href="/FacultyNews">Faculty News</a>
+                </div>
+                <div class="col-sm-4">
+                    <a class="btn button-color btn-lg w-75" type="button" href="/EventNews">Event News</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main%}
+

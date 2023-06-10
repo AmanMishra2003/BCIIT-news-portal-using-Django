@@ -1,0 +1,39 @@
+{% extends 'testApp/index.html' %}
+{%load static%}
+
+{% block title %}
+Faculty News
+{% endblock %}
+ 
+{% block main %}
+<div class="container-fluid my-4 ">
+    
+    <div class="row ">
+        <div class="col-md-4 text-center my-3 px-auto d-flex justify-content-center">
+            <div class="card border border-info position-realative nav-color" style="width: 20rem;">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">Latest</span>
+                <img src="{%static 'images/facultysir.png'%}" class="card-img-top image-fluid p-2 " alt="...">
+                <div class="card-body nav-color">
+                  <h5 class="card-title text-white h4 heading-font">Prof(Dr.) Ravish Sagar</h5>
+                  <p class="card-text fs-4 lead">BCIIT Director</p>
+                  <a href="#" class="btn button-color">Learn More</a>
+                </div>
+             </div>
+        </div>
+        {% for x in data %}
+        <div class="col-md-4 text-center my-3 px-auto d-flex justify-content-center">
+            <div class="card border border-info nav-color position-realative" style="width: 20rem;">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">Latest</span>
+                <img src="{{x.img.url}}" class="card-img-top image-fluid p-2" alt="...">
+                <div class="card-body nav-color">
+                  <h5 class="card-title text-white h2 heading-font">{{x.title}}</h5>
+                  <p class="card-text lead fs-6">{{x.desc}}</p>
+                  <a href="#" class="btn button-color">Learn More</a>
+                </div>
+             </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+</div>
+{% endblock main%}
